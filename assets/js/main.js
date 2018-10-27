@@ -22,7 +22,6 @@ angular.module('app', [])
 
 
 
-    
     // $scope.$watch('input', function (first, second) {
     //   if (first !== second) {
     //     let plusPrefix = $scope.input + 'q';
