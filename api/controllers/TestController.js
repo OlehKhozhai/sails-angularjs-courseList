@@ -18,8 +18,9 @@ module.exports = {
       if (!req.isSocket) {
         return res.badRequest('Only socket accepted');
       }
+      let plusPrefix = req.body.name + 'q';
       const course = {
-        name : req.body.name,
+        name : plusPrefix,
         done: req.body.done
       }
       let newCourse = await Test.create(course).fetch();
@@ -45,6 +46,12 @@ module.exports = {
      await Test.destroy({ id:req.body.id }).fetch();
       
       sails.sockets.broadcast('channel', 'delete', {id : req.body.id} )
+    },
+
+
+    changeInput: async function(req, res) {
+      let findInput = await Test.count({ id:req.body.id, name:req.body.name })
+      console.log(findInput);
     }
 
 };

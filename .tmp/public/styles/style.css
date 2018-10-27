@@ -1,0 +1,15 @@
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+input.ng-invalid {
+    background-color: rgb(233, 150, 102);
+}
+
+input.ng-valid {
+    background-color: inherit;
+}
