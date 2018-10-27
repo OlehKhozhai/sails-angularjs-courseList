@@ -21,7 +21,7 @@ angular.module('app', [])
     };
 
 
-    
+  
     // $scope.$watch('input', function (first, second) {
     //   if (first !== second) {
     //     let plusPrefix = $scope.input + 'q';
@@ -38,7 +38,7 @@ angular.module('app', [])
       let plusPrefix = $scope.input + 'q';
       $http.get('http://@localhost:1337/test')
         .then(function (response) {
-          response.data.length >= 1 ? $scope.inputStyle = true : $scope.inputStyle = false
+          console.log(response)
         });
     };
 
