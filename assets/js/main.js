@@ -37,7 +37,7 @@ angular.module('app', [])
       let plusPrefix = $scope.input + 'q';
       $http.get('http://@localhost:1337/test')
         .then(function (response) {
-          console.log(response)
+          console.log('oleh old', response)
         });
     };
 
